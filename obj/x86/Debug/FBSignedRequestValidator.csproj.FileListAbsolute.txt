@@ -10,3 +10,5 @@ C:\Users\rdasxy\Desktop\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 C:\Users\rdasxy\Desktop\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\rdasxy\Desktop\ConsoleApplication1\bin\Debug\Newtonsoft.Json.dll
 C:\Users\rdasxy\Desktop\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\rdasxy\Documents\GitHub\FBSignedRequestValidator\obj\x86\Debug\ConsoleApplication1.exe
+C:\Users\rdasxy\Documents\GitHub\FBSignedRequestValidator\obj\x86\Debug\ConsoleApplication1.pdb

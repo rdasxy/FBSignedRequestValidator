@@ -15,9 +15,11 @@ namespace FBSignedRequestValidator
 		{
 			string[] signedRequestTokens = signedRequest.Split ('.');
 			
-			if (signedRequestTokens.Length != 2) {
+			if (signedRequestTokens.Length != 2)
+      {
 				return false;
 			}
+
 			string encodedHmacShaSignature = signedRequestTokens [0];
 			string base64Json = signedRequestTokens [1];
 
@@ -26,17 +28,16 @@ namespace FBSignedRequestValidator
 			Dictionary<string, string> decodedPayload = DecodePayload (base64Json);
 
 			string decodedAlgorithm = decodedPayload ["algorithm"];
-			if (!decodedAlgorithm.Equals (
-				"HMAC-SHA256",
-				StringComparison.OrdinalIgnoreCase
-			)) {
+			if (!decodedAlgorithm.Equals ("HMAC-SHA256", StringComparison.OrdinalIgnoreCase))
+      {
 				return false;
 			}
 
 			using (var cryto = new System.Security.Cryptography.HMACSHA256(Encoding.UTF8.GetBytes(appSecret))) {
 				var hash = Convert.ToBase64String (cryto.ComputeHash (Encoding.UTF8.GetBytes (base64Json)));
 				var decodedHash = Base64UrlDecode (hash);
-				if (decodedHash != signature) {
+				if (decodedHash != signature) 
+        {
 					return false;
 				}
 			}
@@ -48,14 +49,8 @@ namespace FBSignedRequestValidator
 		private static Dictionary<string, string> DecodePayload (string payload)
 		{
 			var encoding = new UTF8Encoding ();
-			var decodedJson = payload.Replace ("=", string.Empty).Replace ('-', '+').Replace (
-				'_',
-				'/'
-			);
-			var base64JsonArray = Convert.FromBase64String (decodedJson.PadRight (
-				decodedJson.Length + (4 - decodedJson.Length % 4) % 4,
-				'='
-			));
+			var decodedJson = payload.Replace ("=", string.Empty).Replace ('-', '+').Replace ('_', '/');
+			var base64JsonArray = Convert.FromBase64String (decodedJson.PadRight (decodedJson.Length + (4 - decodedJson.Length % 4) % 4, '='));
 			var json = encoding.GetString (base64JsonArray);
 			var jObject = JObject.Parse (json);
 
