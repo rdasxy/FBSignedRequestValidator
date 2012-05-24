@@ -1,0 +1,6 @@
+c:\users\rdasxy\documents\visual studio 2010\Projects\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+c:\users\rdasxy\documents\visual studio 2010\Projects\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+c:\users\rdasxy\documents\visual studio 2010\Projects\ConsoleApplication1\bin\Debug\Newtonsoft.Json.dll
+c:\users\rdasxy\documents\visual studio 2010\Projects\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\rdasxy\documents\visual studio 2010\Projects\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+c:\users\rdasxy\documents\visual studio 2010\Projects\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
